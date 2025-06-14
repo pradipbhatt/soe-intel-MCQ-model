@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated MCQs - Detailed Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Generated MCQs</h1>
+        <ul class="list-group">
+            {% for index, mcq in mcqs %}
+                <li class="list-group-item">
+                    <strong>Q{{ index }}:</strong> {{ mcq[0] }}?
+                    <ul>
+                        {% for option in mcq[1] %}
+                            <li>{{ option }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p><em>Correct Answer: {{ mcq[2] }}</em></p>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('download_pdf') }}" class="btn btn-success mt-3">Download MCQs as PDF</a>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">Generate More MCQs</a>
+    </div>
+</body>
+</html>

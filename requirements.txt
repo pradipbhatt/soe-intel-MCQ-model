@@ -1,13 +1,11 @@
 Flask==2.2.5
-Flask-Bootstrap==3.3.7.1
-spacy==3.7.0  # Downgraded for stability
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0.tar.gz  # Pre-downloaded model
+bootstrap-flask==2.5.0  # Updated to latest stable version
+spacy==3.7.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0.tar.gz
 PyPDF2==3.0.1
 requests==2.31.0
 beautifulsoup4==4.12.3
 reportlab==3.6.13
-tensorflow-cpu==2.15.0  # Lighter CPU-only version
-numpy==1.24.4  # Updated for TF 2.15 compatibility
+tensorflow-cpu==2.15.0
+numpy==1.24.4
 gunicorn==21.2.0
-thinc==8.1.12  # Pinned for spaCy compatibility
-blis==0.7.11 --only-binary=:all:  # Force pre-built wheel

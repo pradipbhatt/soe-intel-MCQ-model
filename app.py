@@ -11,17 +11,20 @@ from io import BytesIO
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
-# TensorFlow/Keras imports for LSTM-based MCQ generation
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout
+from flask import Flask, render_template, request, send_file, session, url_for, redirect
+from bootstrap_flask import Bootstrap  # Changed from flask_bootstrap
+import spacy
+import random
+from collections import Counter
+from PyPDF2 import PdfReader
+import requests
+from bs4 import BeautifulSoup
+from io import BytesIO
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
-Bootstrap(app)
+Bootstrap(app)  # Initialization remains the same
 
 # Load spaCy model with word vectors (using medium model for vectors)
 nlp = spacy.load("en_core_web_md")

@@ -1,7 +1,7 @@
 Flask==2.2.5
-bootstrap-flask==2.5.0  # Updated to latest stable version
-spacy==3.7.0
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0.tar.gz
+Flask-Bootstrap==3.3.7.1  # This is the correct package name
+spacy==3.7.2
+https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.7.1/en_core_web_md-3.7.1.tar.gz
 PyPDF2==3.0.1
 requests==2.31.0
 beautifulsoup4==4.12.3

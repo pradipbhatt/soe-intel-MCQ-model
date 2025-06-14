@@ -1,7 +1,8 @@
 Flask==2.2.5
-Flask-Bootstrap==3.3.7.1  # This is the correct package name
+Flask-Bootstrap==3.3.7.1
 spacy==3.7.2
-https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.7.1/en_core_web_md-3.7.1.tar.gz
+--find-links https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0.tar.gz
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0.tar.gz
 PyPDF2==3.0.1
 requests==2.31.0
 beautifulsoup4==4.12.3
@@ -9,3 +10,4 @@ reportlab==3.6.13
 tensorflow-cpu==2.15.0
 numpy==1.24.4
 gunicorn==21.2.0
+thinc==8.1.12
